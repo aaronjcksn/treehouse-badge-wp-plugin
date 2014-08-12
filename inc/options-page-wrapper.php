@@ -11,13 +11,16 @@
 			<div id="post-body-content">
 				
 				<div class="meta-box-sortables ui-sortable">
-					
+
+					<?php if( !isset( $wptreehouse_username) || $wptreehouse_username == '' ): ?>
+
 					<div class="postbox">
 					
 						<h3><span>Let's Get Started</span></h3>
 						<div class="inside">
 
-							<form action="" method="post">
+							<form name="wptreehouse_username_form" method="post" action="">
+								<input type="hidden" name="wptreehouse_form_submitted" value="Y">
 									<table class="form-table">
 										<tr>
 											<td>
@@ -33,6 +36,8 @@
 						</div> <!-- .inside -->
 					
 					</div> <!-- .postbox -->
+
+					<?php else: ?>
 
 					<div class="postbox">
 					
@@ -76,6 +81,8 @@
 						</div> <!-- .inside -->
 					
 					</div> <!-- .postbox -->
+
+				<?php endif; ?>
 					
 				</div> <!-- .meta-box-sortables .ui-sortable -->
 				
@@ -85,6 +92,8 @@
 			<div id="postbox-container-1" class="postbox-container">
 				
 				<div class="meta-box-sortables">
+
+					<?php if( isset( $wptreehouse_username) || $wptreehouse_username != '' ): ?>
 					
 					<div class="postbox">
 					
@@ -99,6 +108,8 @@
 							</ul>
 						
 					</div> <!-- .postbox -->
+					
+					<?php endif; ?>
 					
 				</div> <!-- .meta-box-sortables -->
 				
